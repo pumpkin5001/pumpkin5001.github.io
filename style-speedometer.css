@@ -1,0 +1,176 @@
+@charset "UTF-8";
+:root {
+  --scale: .9;
+  --bgColor: rgb(63, 65, 63);
+  --border4: 4px;
+}
+
+* {
+  padding: 0;
+}
+
+body {
+  display: block;
+  background: var(--bgColor);
+}
+
+.canvases {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 0;
+  margin: 0;
+  height: auto;
+}
+
+.canvases #canvas1,
+.canvases #canvas2 {
+  display: block;
+  -webkit-transform: scale(var(--scale));
+          transform: scale(var(--scale));
+  padding: 0;
+  margin: 0;
+}
+
+.canvases #canvas1 #canvas2,
+.canvases #canvas2 #canvas2 {
+  background: none;
+  -webkit-filter: blur(16px) contrast(16);
+          filter: blur(16px) contrast(16);
+}
+
+.input-speed {
+  display: inline-block;
+  position: relative;
+  color: aliceblue;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.input-speed label {
+  margin: 0px 0 30px 0;
+}
+
+.input-speed input[type="number"],
+.input-speed label {
+  font: 30px Arial;
+}
+
+input:hover {
+  border-color: #e43112;
+  -webkit-box-shadow: 0 0 50px 30px rgba(202, 113, 11, 0.45);
+          box-shadow: 0 0 50px 30px rgba(202, 113, 11, 0.45);
+}
+
+input:focus {
+  border-color: orange;
+  background-color: white;
+}
+
+/* Для Chrome и Safari */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Для Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+/* Для IE и Edge */
+input[type="number"]::-ms-clear {
+  display: none;
+}
+
+.input {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0;
+  margin: 0;
+}
+
+.input input {
+  padding: 0;
+  margin: 0;
+  border-radius: 5px;
+  height: 36px;
+  width: 100px;
+  border-radius: 10px;
+  height: 60px;
+  padding: 0;
+  padding-left: 30px;
+}
+
+.buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  position: relative;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 0;
+}
+
+.buttons button {
+  height: 28px;
+  width: 28px;
+  -webkit-transform: translate(-30px, 0);
+          transform: translate(-30px, 0);
+  border-radius: 6px;
+}
+
+input:invalid {
+  border: 2opx dashed red;
+}
+
+input:invalid:required {
+  background-image: -webkit-gradient(linear, left top, right top, from(#f5edef), to(#eee090));
+  background-image: linear-gradient(to right, #f5edef, #eee090);
+}
+
+input:valid {
+  border: 2px solid #de10e6;
+}
+
+input:invalid:out-of-range {
+  border: 15px dashed red;
+  -webkit-box-shadow: 0 0 5px 1px red;
+          box-shadow: 0 0 5px 1px red;
+}
+
+input:focus:invalid {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+/*# sourceMappingURL=style-speedometer.css.map */

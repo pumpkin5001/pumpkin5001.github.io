@@ -1,0 +1,15 @@
+:root {
+  --border4: 4px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+#canvas2 {
+  position: absolute;
+  -webkit-filter: blur(12px) contrast(14);
+          filter: blur(12px) contrast(14);
+}
+/*# sourceMappingURL=style-ring.css.map */

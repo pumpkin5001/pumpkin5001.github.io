@@ -1,0 +1,10 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+#canvas2 {
+  background: rgb(65, 65, 65);
+  position: absolute;
+  filter: blur(2px) contrast(4);
+}

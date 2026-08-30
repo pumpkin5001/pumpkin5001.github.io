@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Speed</title>
+	<link rel="stylesheet" href="style-speedometer.css">
+	<link rel="stylesheet" href="./myRing/style-ring.css">
+
+</head>
+
+<body>
+
+	<div class="canvases">
+		<canvas id="canvas2"></canvas>
+		<canvas id="canvas1"></canvas>
+	</div>
+	<div class="input-speed">
+		<label for="num-input">Введите значение:</label>
+		<div class="input">
+			<input type="number" novalidate data-is-input id="num-input" min="0" max="500" step="10" minlength="1"
+				maxlength="3" required pattern=" "
+				title="need right diapazon from namber" aria-errormessage="input-errors" />
+
+			<div class="buttons">
+				<button id="up">+</button>
+				<button id="down">-</button>
+
+			</div>
+		</div>
+		<span id="num-input-errors" class="input-errors" data-is-input-errors>ошибка....</span>
+	</div>
+	<script type="module" src="script-speedometer.js"></script>
+	<script type="module" src="./myRing/script-ring.js"></script>
+
+</body>
+
+</html><canvas id="canvas1"></canvas>

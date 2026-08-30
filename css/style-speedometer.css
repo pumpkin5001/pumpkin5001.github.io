@@ -1,0 +1,20 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: block;
+  background: rgb(63, 65, 63);
+}
+
+#canvas1,
+#canvas2 {
+  position: absolute;
+  transform: translate(50%, 0);
+}
+
+#canvas2 {
+  background: none;
+  filter: blur(16px) contrast(16);
+}

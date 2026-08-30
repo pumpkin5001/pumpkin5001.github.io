@@ -1,0 +1,163 @@
+:root {
+	--scale: .9;
+	--bgColor: rgb(63, 65, 63);
+	--border4: 4px;
+}
+
+* {
+	padding: 0;
+
+}
+
+body {
+	display: block;
+	background: var(--bgColor)
+}
+
+.canvases {
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	// border: var(--border4) solid blue;
+	// transform: scale(var(--scale));
+	padding: 0;
+	margin: 0;
+	height: auto;
+
+	#canvas1,
+	#canvas2 {
+		display: block;
+		// border: var(--border4) solid rgb(212, 0, 255);
+		transform: scale(var(--scale));
+		padding: 0;
+		margin: 0;
+
+
+
+		#canvas2 {
+			background: none;
+			filter: blur(16px) contrast(16);
+		}
+	}
+}
+
+.input-speed {
+	display: inline-block;
+	// border: var(--border4) solid rgb(43, 255, 0);
+	position: relative;
+	color: aliceblue;
+	// color: rgb(71, 59, 45);
+	display: flex;
+	flex-direction: column;
+
+	align-items: center;
+	justify-content: center;
+
+	label {
+		margin: 0px 0 30px 0;
+
+	}
+
+	input[type="number"],
+	label {
+		font: 30px Arial;
+	}
+
+}
+
+input:hover {
+	border-color: #e43112;
+	box-shadow: 0 0 50px 30px rgba(202, 113, 11, 0.45);
+}
+
+input:focus {
+	border-color: orange;
+	background-color: white;
+
+}
+
+
+
+/* Для Chrome и Safari */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+}
+
+/* Для Firefox */
+input[type="number"] {
+	-moz-appearance: textfield;
+}
+
+/* Для IE и Edge */
+input[type="number"]::-ms-clear {
+	display: none;
+}
+
+.input {
+	display: flex;
+	flex-direction: row;
+	// border: var(--border4) solid blue;
+	// height: 60px;
+	align-items: center;
+	padding: 0;
+	margin: 0;
+
+	input {
+		padding: 0;
+		margin: 0;
+		border-radius: 5px;
+		height: 36px;
+		width: 100px;
+		border-radius: 10px;
+		height: 60px;
+		padding: 0;
+		padding-left: 30px;
+
+	}
+
+}
+
+
+.buttons {
+	display: flex;
+	height: 100%;
+	position: relative;
+	flex-direction: column;
+	width: 0;
+
+
+	button {
+		height: 28px;
+		width: 28px;
+		transform: translate(-30px, 0);
+		border-radius: 6px;
+	}
+}
+
+input:invalid {
+	border: 2opx dashed red;
+}
+
+input:invalid:required {
+	background-image: linear-gradient(to right, rgb(245, 237, 239), rgb(238, 224, 144));
+}
+
+input:valid {
+	border: 2px solid rgb(222, 16, 230);
+}
+
+input:invalid:out-of-range {
+
+	border: 15px dashed red;
+
+	box-shadow: 0 0 5px 1px red;
+}
+
+input:focus:invalid {
+	box-shadow: none;
+}
+
+//Валидация форм на стороне клиента
